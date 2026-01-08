@@ -31,6 +31,10 @@ Execution profile: (from docs/codex/PROJECT_CONTRACT.md or UNKNOWN)
 - docs/codex/AGENT_GUIDE.md: ...
 - (CONTEXT.md paths / index that were actually read)
 
+### Context capture
+- Read settings from docs/codex/CONTEXT_INDEX.md and follow them.
+- Status: <On|Off>
+
 ### Repro
 - Steps:
   1) ...

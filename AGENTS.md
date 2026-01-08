@@ -92,6 +92,10 @@ If task was not `plans/` and changed code/configs, and `docs/codex/CONTEXT_INDEX
 - For each such folder create/update `CONTEXT.md` (minimally).
 - Add entries to `docs/codex/CONTEXT_INDEX.md` for these `CONTEXT.md`.
 
+## 7.1) Context Capture Settings (source of truth)
+- All context capture settings are defined in docs/codex/CONTEXT_INDEX.md.
+- When creating X-work.md, read the settings from CONTEXT_INDEX.md and fill the Context updates section accordingly.
+
 ## 8) Agent Communication and Language Policy
 #### 8.1) Chat / Interactive Communication
 - Language: **English**
