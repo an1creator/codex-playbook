@@ -74,11 +74,9 @@ Branch:
   - task-slug: filename `X.md` without extension
 
 Commits (if repo has no other practice):
-- bugs: `fix: ...`
-- features: `feat: ...`
-- refactoring: `refactor: ...` (or `chore:` if more appropriate)
-- test: `test: ...`
-- plans/docs: `docs: ...` or `chore: ...`
+- Format: `scope: subject` (scope is required)
+- Subject: imperative mood, max 72 chars
+- Examples: `api: add token refresh`, `ui: handle empty state`
 
 ## 6) Task Completion and Move to completed (STRICT)
 When work is finished:
