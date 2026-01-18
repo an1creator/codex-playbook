@@ -19,9 +19,10 @@ Improve structure/maintainability without changing external behavior.
 # Work (refactoring)
 
 Status: DRAFT | APPROVED | IN_PROGRESS | DONE
-Task: refactoring/X.md
+Task: <category>/<slug>.md | CHAT
 Slug: X
 Execution profile: (from docs/codex/PROJECT_CONTRACT.md or UNKNOWN)
+Source: FILE | CHAT
 
 ### Working set
 - ...
@@ -34,6 +35,12 @@ Execution profile: (from docs/codex/PROJECT_CONTRACT.md or UNKNOWN)
 ### Context capture
 - Read settings from docs/codex/CONTEXT_INDEX.md and follow them.
 - Status: <On|Off>
+
+### Input (if Source=CHAT)
+- User request:
+  - ...
+- Artifacts/links (if any):
+  - ...
 
 ### Goal
 - ...
@@ -49,7 +56,7 @@ Execution profile: (from docs/codex/PROJECT_CONTRACT.md or UNKNOWN)
 - ...
 
 ### Git
-- Branch: refactoring/X
+- Branch: <category>/<slug>
 - Commits (draft):
   - refactor: ...
 

@@ -19,9 +19,10 @@ Fix bug with minimal change.
 # Work (bugs)
 
 Status: DRAFT | APPROVED | IN_PROGRESS | DONE
-Task: bugs/X.md
+Task: <category>/<slug>.md | CHAT
 Slug: X
 Execution profile: (from docs/codex/PROJECT_CONTRACT.md or UNKNOWN)
+Source: FILE | CHAT
 
 ### Working set
 - ...
@@ -34,6 +35,12 @@ Execution profile: (from docs/codex/PROJECT_CONTRACT.md or UNKNOWN)
 ### Context capture
 - Read settings from docs/codex/CONTEXT_INDEX.md and follow them.
 - Status: <On|Off>
+
+### Input (if Source=CHAT)
+- User request:
+  - ...
+- Artifacts/links (if any):
+  - ...
 
 ### Repro
 - Steps:
@@ -53,7 +60,7 @@ Execution profile: (from docs/codex/PROJECT_CONTRACT.md or UNKNOWN)
 - (commands/manual steps, expected result)
 
 ### Git
-- Branch: bugs/X
+- Branch: <category>/<slug>
 - Commits (draft):
   - fix: ...
 

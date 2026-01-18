@@ -18,9 +18,10 @@ Add/improve tests or testability.
 # Work (test)
 
 Status: DRAFT | APPROVED | IN_PROGRESS | DONE
-Task: test/X.md
+Task: <category>/<slug>.md | CHAT
 Slug: X
 Execution profile: (from docs/codex/PROJECT_CONTRACT.md or UNKNOWN)
+Source: FILE | CHAT
 
 ### Working set
 - ...
@@ -33,6 +34,12 @@ Execution profile: (from docs/codex/PROJECT_CONTRACT.md or UNKNOWN)
 ### Context capture
 - Read settings from docs/codex/CONTEXT_INDEX.md and follow them.
 - Status: <On|Off>
+
+### Input (if Source=CHAT)
+- User request:
+  - ...
+- Artifacts/links (if any):
+  - ...
 
 ### Test scope
 - Scenarios:
@@ -48,7 +55,7 @@ Execution profile: (from docs/codex/PROJECT_CONTRACT.md or UNKNOWN)
 - (test run/manual steps)
 
 ### Git
-- Branch: test/X
+- Branch: tests/<slug>
 - Commits (draft):
   - test: ...
 

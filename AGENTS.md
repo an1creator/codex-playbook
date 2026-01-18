@@ -25,7 +25,7 @@ IMPORTANT: even if policy was not automatically "mixed in", you MUST OPEN and fo
 - `docs/codex/AGENT_GUIDE.md` — architectural guide (no code).
 - `docs/codex/CONTEXT_INDEX.md` — context index (created after first code task).
 - `CONTEXT.md` — local folder context (invariants/boundaries/risks).
-- `X-work.md` — task work file next to `X.md` (until completion).
+- `X-work.md` — task work file (if X.md exists: next to it; if task starts from chat: standalone in tasks/<category>/ as <slug>-work.md).
 
 #### 1.1) Templates
 - Project templates are in `docs/codex/templates/`.
@@ -37,18 +37,30 @@ Rule:
 
 
 ## 2) Two-Phase Protocol (STRICT)
-When receiving task `X.md` from `bugs|features|refactoring|test|plans`:
+
+Task can start from:
+A) Spec file `tasks/<category>/X.md`
+B) Chat request (no spec file)
+
+A) If `X.md` exists:
 1) Create `X-work.md` next to `X.md`.
 2) Fill `X-work.md` according to category template (from policy).
 3) Ask user to approve plan.
 
+B) If task starts from chat:
+1) Auto-pick category: `bugs|features|refactoring|tests|plans`.
+2) Auto-generate slug: `<task>-<4hex>`.
+3) Create single file: `tasks/<category>/<slug>-work.md` (DO NOT create `X.md`).
+4) Put the user request into `Input` section inside `<slug>-work.md`.
+5) Ask user to approve plan.
+
 Modes:
-- "Correction" mode: change ONLY `X-work.md` (and planning documents if necessary).
+- "Correction" mode: change ONLY `*-work.md` (and planning documents if necessary).
 - "Execution" mode: change code strictly according to approved plan.
 
 Gates:
 - FORBIDDEN to change code/configs before explicit user approval (`Status: APPROVED`).
-- Any deviation from plan = update `X-work.md` + get approval again.
+- Any deviation from plan = update `*-work.md` + get approval again.
 
 ## 3) Context Gathering Before Plan (STRICT)
 Before writing Plan:
@@ -70,8 +82,8 @@ Before writing Plan:
 ## 5) Git (universal)
 Branch:
 - `<category>/<task-slug>`
-  - category: `bugs|features|refactoring|test|plans`
-  - task-slug: filename `X.md` without extension
+  - category: `bugs|features|refactoring|tests|plans`
+  - task-slug: if X.md exists — filename without extension; otherwise — value from Slug:in*-work.md.
 
 Commits (if repo has no other practice):
 - Format: `scope: subject` (scope is required)
@@ -81,9 +93,12 @@ Commits (if repo has no other practice):
 ## 6) Task Completion and Move to completed (STRICT)
 When work is finished:
 1) In `X-work.md` set `Status: DONE` and record completed checks.
-2) Move both files:
-   - `X.md` -> `<category>/completed/X.md`
-   - `X-work.md` -> `<category>/completed/X-work.md`
+2) Move files that exist:
+   - if `X.md` exists:
+     - `X.md` -> `<category>/completed/X.md`
+     - `X-work.md` -> `<category>/completed/X-work.md`
+   - if no `X.md` (chat-start):
+     - `<slug>-work.md` -> `<category>/completed/<slug>-work.md`
 
 ## 7) Context Creation After First Code Task (STRICT)
 If task was not `plans/` and changed code/configs, and `docs/codex/CONTEXT_INDEX.md` doesn't exist yet:

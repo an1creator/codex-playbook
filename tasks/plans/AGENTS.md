@@ -14,13 +14,20 @@ Design a solution: options, trade-offs, stages, risks, completion criteria. Do n
 # Work (plans)
 
 Status: DRAFT | APPROVED | IN_PROGRESS | DONE
-Task: plans/X.md
+Task: <category>/<slug>.md | CHAT
 Slug: X
+Source: FILE | CHAT
 
 ### Context loaded
 - docs/codex/PROJECT_CONTRACT.md (if exists)
 - docs/codex/AGENT_GUIDE.md (if exists)
 - other relevant documents
+
+### Input (if Source=CHAT)
+- User request:
+  - ...
+- Artifacts/links (if any):
+  - ...
 
 ### Goal
 - ...
@@ -49,6 +56,6 @@ Slug: X
 - ...
 
 ### Git (if there will be doc changes)
-- Branch: plans/X
+- Branch: <category>/<slug>
 - Commits (draft):
   - docs: ... / chore: ...
